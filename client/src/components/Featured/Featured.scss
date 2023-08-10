@@ -1,0 +1,81 @@
+@import "../../app.scss";
+
+.featured{
+    height: 90vh;
+    position: relative;
+
+    .category{
+        position: absolute;
+        left: 50px;
+        top: 80px;
+        font-size: 30px;
+        color: white;
+        font-weight: 500;
+        display: flex;
+        align-items: center;
+
+        select{
+            background-color: var(--main-color);
+            border-radius: 5px;
+            color: white;
+            border: 1px solid white;
+            padding: 5px;
+            cursor: pointer;
+            margin-left: 20px;
+        }
+    }
+
+    img{
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+    }
+
+    .info{
+        .movieTitle{
+            font-weight: 600;
+            font-size: 40px;
+        }
+        display: flex;
+        flex-direction: column;
+        width: 35%;
+        position: absolute;
+        left: 50px;
+        bottom: 100px;
+        color: white;
+
+        .desc{
+            margin: 20px 0px;
+
+            @include mobile{
+                width: 60vw;
+            }
+        }
+
+        .buttons{
+            display: flex;
+            button{
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 10px 20px;
+                border: none;
+                border-radius: 5px;
+                margin-right: 10px;
+                font-size: 16px;
+                font-weight: bold;
+                cursor: pointer;
+
+                &.play{
+                    background-color: white;
+                    color: var(--main-color);
+                }
+                &.more{
+                    background-color: gray;
+                    color: white;
+                }
+            }
+            
+        }
+    }
+}
