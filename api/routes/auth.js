@@ -39,7 +39,8 @@ router.post("/login", async(req,res)=>{
 
         res.cookie("jwt",accessToken,{
             httpOnly: true,
-            sameSite: 'strict',
+            sameSite: 'none',
+            secure: true
         });
 
         return res.status(200).json({...info, accessToken});

@@ -12,9 +12,7 @@ const cookieParser = require("cookie-parser");
 dotenv.config();
 
 app.use(cors({
-    origin: (origin, callback)=>{
-        callback(null,true);
-    },
+    origin: "https://quickflix.vercel.app",
     methods: ['GET', 'POST', "DELETE", "PUT"],
     allowedHeaders: ['Content-Type', 'OPTIONS', 'ORIGIN'],
     credentials: true
