@@ -1,7 +1,7 @@
 # Quickflix - Web Streaming App
 This project is a cutting-edge web application that brings the excitement of movies and TV shows to your fingertips. With a sleek and user-friendly interface, our streaming app allows users to explore and enjoy a vast collection of unlimited movies, TV shows, and more.
 
-# Live Link - https://quickflix-client.vercel.app
+# Live Link - https://quickflix.vercel.app/register
 
 # Features
 
