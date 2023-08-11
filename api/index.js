@@ -12,17 +12,17 @@ const cookieParser = require("cookie-parser");
 dotenv.config();
 
 app.use(cors({
-    origin: "https://quickflix.vercel.app",
+    origin: ["https://quickflix.vercel.app", "http://localhost:3000"],
     methods: ['GET', 'POST', "DELETE", "PUT"],
     allowedHeaders: ['Content-Type', 'OPTIONS', 'ORIGIN'],
     credentials: true
 }));
-app.use(cookieParser());
 
 mongoose.connect(process.env.MONGO_URL)
 .then(()=>console.log("DB is running successfully"))
 .catch(err => console.log(err))
 
+app.use(cookieParser());
 app.use(express.json());
 app.use("/api/auth",authRoute);
 app.use("/api/users",userRoute);
