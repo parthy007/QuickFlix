@@ -13,8 +13,7 @@ dotenv.config();
 
 app.use(cors({
     origin: (origin, callback)=>{
-        if(!origin) return callback(null,true);
-        return callback(null,true);
+        callback(null,true);
     },
     methods: ['GET', 'POST', "DELETE", "PUT"],
     allowedHeaders: ['Content-Type', 'OPTIONS', 'ORIGIN'],
